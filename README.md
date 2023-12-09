@@ -14,6 +14,12 @@ Visual anomaly detection, the task of detecting abnormal characteristics in imag
 
 ### Running the code
 
+Run `sh sanflow.sh`
+
+### Weights
+WRN50: 
+WRN101: 
+
 **0. Preliminaries**
 
 - For `train_liif.py` or `test.py`, use `--gpu [GPU]` to specify the GPUs (e.g. `--gpu 0` or `--gpu 0,1`).
