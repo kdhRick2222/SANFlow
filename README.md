@@ -17,28 +17,9 @@ Visual anomaly detection, the task of detecting abnormal characteristics in imag
 Run `sh sanflow.sh`
 
 ### Weights
-WRN50: 
-WRN101: 
+WRN50 link: 
 
-**0. Preliminaries**
-
-- For `train_liif.py` or `test.py`, use `--gpu [GPU]` to specify the GPUs (e.g. `--gpu 0` or `--gpu 0,1`).
-
-- For `train_liif.py`, by default, the save folder is at `save/_[CONFIG_NAME]`. We can use `--name` to specify a name if needed.
-
-- For dataset args in configs, `cache: in_memory` denotes pre-loading into memory (may require large memory, e.g. ~40GB for DIV2K), `cache: bin` denotes creating binary files (in a sibling folder) for the first time, `cache: none` denotes direct loading. We can modify it according to the hardware resources before running the training scripts.
-
-**1. DIV2K experiments**
-
-**Train**: `python train_liif.py --config configs/train-div2k/train_edsr-baseline-liif.yaml` (with EDSR-baseline backbone, for RDN replace `edsr-baseline` with `rdn`). We use 1 GPU for training EDSR-baseline-LIIF and 4 GPUs for RDN-LIIF.
-
-**Test**: `bash scripts/test-div2k.sh [MODEL_PATH] [GPU]` for div2k validation set, `bash scripts/test-benchmark.sh [MODEL_PATH] [GPU]` for benchmark datasets. `[MODEL_PATH]` is the path to a `.pth` file, we use `epoch-last.pth` in corresponding save folder.
-
-**2. celebAHQ experiments**
-
-**Train**: `python train_liif.py --config configs/train-celebAHQ/[CONFIG_NAME].yaml`.
-
-**Test**: `python test.py --config configs/test/test-celebAHQ-32-256.yaml --model [MODEL_PATH]` (or `test-celebAHQ-64-128.yaml` for another task). We use `epoch-best.pth` in corresponding save folder.
+WRN101 link: 
 
 ### Citation
 If you find our work useful in your research, please cite:
