@@ -14,15 +14,23 @@ Visual anomaly detection, the task of detecting abnormal characteristics in imag
 
 ### Running the code
 
-Run `sh sanflow.sh`
+Train:
 
-### Weights
-WRN50 link: 
+`python main.py --gpu 0 --inp 256 --lr 5e-4 --meta-epochs 20 --sub-epoch 4 --class-name $category -bs 4 -pl 3 --pro`
 
-WRN101 link: 
+`python main.py --gpu 0 --inp 320 --lr 5e-4 --meta-epochs 20 --sub-epoch 4 --dataset mvtec --class-name $category -bs 4 -pl 3 --pro -enc 'wide_resnet101_2'`
+
+Test:
+
+`python main.py --gpu 0 --dataset mvtec --inp 256 --action-type norm-test --class-name $category --checkpoint './weights_WRN50/'$category'.pt' --pro --viz`
+
+`python main.py --gpu 0 --dataset mvtec --inp 320 --action-type norm-test --class-name $category --checkpoint './weights_WRN101/'$category'.pt' -enc 'wide_resnet101_2' --pro --viz`
+
+Run:`sh sanflow.sh`
+
 
 ### Source
-The code is heavily borrowed from [CFLOW-AD](https://github.com/gudovskiy/cflow-ad)
+The code is heavily borrowed from [CFLOW-AD](https://github.com/gudovskiy/cflow-ad).
 
 ### Citation
 If you find our work useful in your research, please cite:
