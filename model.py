@@ -65,9 +65,7 @@ def freia_cflow_head(c, n_feat):
 
 
 def load_decoder_arch(c, dim_in):
-    if   c.dec_arch == 'freia-flow':
-        decoder = freia_flow_head(c, dim_in)
-    elif c.dec_arch == 'freia-cflow':
+    if   c.dec_arch == 'sanflow':
         decoder = freia_cflow_head(c, dim_in)
     else:
         raise NotImplementedError('{} is not supported NF!'.format(c.dec_arch))
