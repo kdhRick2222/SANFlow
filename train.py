@@ -96,10 +96,7 @@ def train_meta_epoch(c, epoch, loader, encoder, decoders, optimizer, pool_layers
                     alpha_p = alpha_[perm[torch.arange(0, E)]]  # Nx1
                     beta_p = beta_[perm[torch.arange(0, E)]]  # Nx1
 
-                    if 'cflow' in c.dec_arch:
-                        z, log_jac_det = decoder(e_p, [c_p,])
-                    else:
-                        z, log_jac_det = decoder(e_p)
+                    z, log_jac_det = decoder(e_p, [c_p,])
 
                     variance_map = torch.exp(beta_) / (1+ torch.exp(alpha_.clamp_(min=log_min, max=log_max)))
                     decoder_log_prob1 = get_logp_snet_mean(epoch, C, z, log_jac_det, m_p, alpha_p, beta_p)
@@ -195,10 +192,7 @@ def test_meta_epoch(c, epoch, loader, encoder, decoders, pool_layers, N, snet):
                     alpha_p = alpha_[idx]
                     beta_p = beta_[idx]
                     #
-                    if 'cflow' in c.dec_arch:
-                        z, log_jac_det = decoder(e_p, [c_p,])
-                    else:
-                        z, log_jac_det = decoder(e_p)
+                    z, log_jac_det = decoder(e_p, [c_p,])
 
                     # variance_map = beta_p / (1 + alpha_p)
  
