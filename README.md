@@ -1,4 +1,4 @@
-# SANFlow: Semantic-Aware Normalizing Flow for Anomaly Detection and Localization (Editing)
+# SANFlow: Semantic-Aware Normalizing Flow for Anomaly Detection and Localization (NeurIPS 2023)
 
 This repository contains the official implementation for SANFlow introduced in the following paper:
 
@@ -12,8 +12,8 @@ Visual anomaly detection, the task of detecting abnormal characteristics in imag
 ### Framework overview
 <img width="731" alt="framework" src="https://github.com/kdhRick2222/SANFlow/assets/62320935/08d581c5-b9cb-48e7-81b3-77e742a8b3ee">
 
-### Weight link
-
+### Pre-trained Weight
+[Link](https://hyu-my.sharepoint.com/:f:/g/personal/daehyun_hanyang_ac_kr/EumuRFjby9NIpX5sOpNXDjIBDoG5rlMiyz6Tg-DkQGKjPA?e=Q0fklC)
 
 
 ### Running the code
