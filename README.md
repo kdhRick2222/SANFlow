@@ -13,7 +13,7 @@ Visual anomaly detection, the task of detecting abnormal characteristics in imag
 <img width="800" alt="framework" src="https://github.com/kdhRick2222/SANFlow/assets/62320935/08d581c5-b9cb-48e7-81b3-77e742a8b3ee">
 
 ### Pre-trained Weight
-[Link](https://hyu-my.sharepoint.com/:f:/g/personal/daehyun_hanyang_ac_kr/EumuRFjby9NIpX5sOpNXDjIBDoG5rlMiyz6Tg-DkQGKjPA?e=Q0fklC)
+[Link](https://1drv.ms/f/s!Aui004qb68oahk_KBPyD-A51WjW0?e=kBHFyB)
 
 
 ### Running the code
